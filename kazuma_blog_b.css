@@ -1,0 +1,148 @@
+/* Enhanced styling for reply system */
+.reply {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.reply .reply {
+    margin-left: 25px;
+    border-left: 2px solid #17a2b8;
+    padding-left: 15px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.reply-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.delete-reply-btn, .delete-comment-btn {
+    background: transparent;
+    color: #dc3545;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.delete-reply-btn:hover, .delete-comment-btn:hover {
+    background: rgba(220, 53, 69, 0.2);
+}
+
+.reply-to-reply-form {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+    padding-left: 15px;
+}
+
+/* SEARCH BAR STYLES */
+.search-container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-box {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border: 2px solid #17a2b8;
+    border-radius: 25px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #138496;
+    box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #17a2b8;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #138496;
+}
+
+.clear-search-btn {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-search-btn:hover {
+    color: #333;
+}
+
+/* PIN FEATURE STYLES */
+.pinned-post {
+    border-left: 5px solid #FFD700 !important;
+    background: linear-gradient(135deg, #8B4000 0%, #A0522D 100%) !important;
+    position: relative;
+}
+
+.pin-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 215, 0, 0.9);
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.pin-btn, .unpin-btn {
+    background: #FFD700;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pin-btn:hover {
+    background: #FFC400;
+}
+
+.unpin-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.unpin-btn:hover {
+    background: #545b62;
+}
+
+/* PIN ICON ANIMATION */
+@keyframes pinBounce {
+    0%, 100% { transform: rotate(-15deg); }
+    50% { transform: rotate(15deg); }
+}
+
+.pin-indicator i {
+    animation: pinBounce 2s infinite;
+}

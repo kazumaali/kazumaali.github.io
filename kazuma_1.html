@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+<head> 
+    
+    
+    <!--1 ind-->
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!--1 ind--><!--CSS-->
+    <link rel="stylesheet" href="kazuma_2.css">
+    
+    
+    <!--1 ind-->
+    <title>Kazuma Ali Website</title>
+    
+    
+    <!--1 ind--><!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+</head>
+<body>
+    
+    
+    <!--1 ind--><!--LOG IN AND SIGN UP-->
+    <div class="login-form">
+        
+        
+        <!--2 ind-->
+        <h3>Welcome to My Website</h3>
+        
+        
+        <div class="auth-buttons">
+            
+            
+            <!--3 ind-->
+            <button onclick="showLogin()">Log In</button>
+            <button onclick="showSignup()">Sign Up</button>
+            
+            
+        </div>
+        
+        
+        <div id="loginSection" class="auth-section hidden">
+            
+            
+            <input type="email" id="emailInput" placeholder="Enter your email...">
+            <input type="password" id="passwordInput" placeholder="Enter your password...">
+            <button onclick="checkAccess()">Login</button>
+            
+            
+        </div>
+        
+        
+        <div id="signupSection" class="auth-section hidden">
+            <input type="text" id="signupUsername" placeholder="Choose a username..." required>
+            <input type="email" id="signupEmail" placeholder="Enter your email...">
+            <input type="password" id="signupPassword" placeholder="Create your password...">
+            <button onclick="signUp()">Create Account</button>
+            
+        </div>
+        
+        
+        <p id="message"></p>
+        
+        
+    </div>
+    
+    
+    <!--1 ind--><!--BACKGROUND SLIDESHOW-->
+    <div class="slide-show">
+        
+        
+        <img src="rengoku.webp" class="slide active">
+        <img src="gintoki.webp" class="slide">
+        <img src="megumin.webp" class="slide">
+        
+        
+    </div>
+    
+    
+    <!--1 ind--><!--PROFILE SECTION-->
+    <section class="profile-picture" id="profilePicture">
+        
+        
+        <!--2 ind--><!--EDIT BUTTON-->
+        <div>
+            
+            
+            <!--3 ind-->
+            <button class="edit-btn edit-btn2" id="editBtn" onclick="showHide()">✏️</button>
+            
+            <section class="edit-form" id="editForm">
+                <input type="file" accept="image/*" placeholder="Change profile picture..." id="profileEd">
+                <button id="changeImg" onclick="changeImg2()">Save</button>
+                <input type="text" placeholder="Change name..." id="profileEdi">
+                <button id="changeH" onclick="changeN()">Save</button>
+                
+            </section>
+            
+            
+        </div>
+        
+        
+        <!--2 ind-->
+        <div>
+            
+            
+            <!--3 ind-->
+            <img src="kazuma.png" alt="Kazuma Ali" onclick="showBigImage()" id="prof">
+            <h1 class="name-title" id="name">Kazuma Ali</h1>
+            
+            
+        </div>
+        
+    </section>
+    
+    
+    <!--1 ind--><!--IMAGE MODAL-->
+    <div id="bigImageOverlay" class="overlay" onclick="hideBigImage()">
+        
+        
+        <img src="kazuma.png" alt="Kazuma Ali Big" id="profi">
+        
+        
+    </div>
+    
+    
+    <!--1 ind--><!--ABOUT ME SECTION-->
+    <section class="about-me" id="aboutMe">
+        
+        
+        <!--2 ind--><!--EDIT BUTTON-->
+        <div>
+            
+            
+            <!--3 ind-->
+            <button class="edit-btn edit-btn3" id="textBtn" onclick="editTxt()">✏️</button>
+            
+            
+        </div>
+        
+        
+       <!--2 ind-->
+       <h1>About Me</h1>
+       <div id="textContent1">
+           <p>Hi!👋🏼</p>
+           <p>My name is Ali.</p>
+           <p>I am a beginner programmer from Iran🇮🇷</p> 
+           <p>I know the basics of Python and I am learning JavaScript, HTML, and CSS right now.</p>
+           <p>I am looking forward to work with you someday.</p>
+       </div>
+        
+        
+    </section>
+    
+    
+    <!--1 ind--><!--HIRE ME SECTION-->
+    <section class="hire-me" id="hireMe">
+        
+        
+        <!--2 ind--><!--EDIT BUTTON-->
+        <div>
+            
+            
+            <!--3 ind-->
+            <button class="edit-btn edit-btn4" id="hireBtn" onclick="changeHire()">✏️</button>
+            
+            
+        </div>
+        
+        
+        <!--2 ind-->
+        <h1>Hire Me</h1>
+        <div id="hireTxt">
+            <p>If you have some projects and need help, you can hire me.</p>
+            <p>  Just send me an <a href="mailto:kazumasatou20021423">email</a></p>
+            <p id="price">  The fee for 2025/26 is 15$/hour.</p>
+        </div>
+        
+        
+    </section>
+    
+    
+    <!--1 ind--><!--SOCIAL MEDIA SECTION-->
+    <section class="social-media" id="socialMedia">
+        
+        
+        <!--2 ind--><!--EDIT BUTTON-->
+        <div>
+            
+            
+            <!--3 ind-->
+            <button class="edit-btn edit-btn5" id="socialBtn" onclick="socialEd()">✏️</button>
+            
+            
+        </div>
+        
+        
+        <!--2 ind-->
+        <h1>My Social Media</h1>
+        <div class="accounts" id="socialAcc">
+            <!--3 ind-->
+            <a href="mailto:kazumasatou20021423">My Email</a>
+            <a href="https://x.com/kazumaali2002">My Twitter/X</a>
+            <a href="https://discord.com/users/kazuma_satou1./">My Discord</a>
+            <a href="https://youtube.com/@kazumaali">My Youtube Channel</a>
+            <a href="https://github.com/kazumaali">My GitHub</a>
+        </div>
+        
+        
+    </section>
+    
+    
+    <!--1 ind--><!--THE HIDE HIRE BUTTON-->
+    <button id="hideHire" class="hide-hire" onclick="hideHire2()">👁</button>
+    
+    
+    <!--1 ind--><!--NAVIGATION BAR-->
+    <nav class="nav-btn" id="navBtn">
+        
+        
+        <!--2 ind-->
+        <a href="kazuma_projects.html"><i class="fas fa-code"></i>Projects</a>
+        <a href="kazuma_blog.html"><i class="fas fa-comment"></i>My Blog</a>
+        <a href="kazuma_1.html" class="active"><i class="fas fa-home"></i>Home</a>
+        <a href="kazuma_blog2.html"><i class="fas fa-brain"></i>Your Blog</a>
+        <a href="kazuma_stats.html"><i class="fas fa-chart-bar"></i>Statistics</a>
+        
+        
+    </nav>
+    
+    
+    <!--1 ind--><!--JAVASCRIPT-->
+    <script src="kazuma_3.js"></script>
+    
+
+</body>
+</html>
