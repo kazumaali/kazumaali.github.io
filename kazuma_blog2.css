@@ -308,7 +308,7 @@
 /* ADD POST BUTTON */
 .add-post-btn {
     position: fixed;
-    bottom: 20px;
+    bottom: 200px;
     right: 20px;
     background: #007bff;
     color: white;
