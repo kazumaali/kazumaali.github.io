@@ -1,3 +1,32 @@
+/* GLOBAL RESPONSIVE ENHANCEMENTS */
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Improve touch targets for mobile */
+button, 
+a, 
+.nav-btn a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Ensure readable text on small screens */
+.blog-post p,
+.project-post p,
+.comment-text,
+.reply-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Make sure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* Enhanced styling for reply system */
 .reply {
     position: relative;

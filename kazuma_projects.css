@@ -1,4 +1,32 @@
-/*text*/
+/* GLOBAL RESPONSIVE ENHANCEMENTS */
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Improve touch targets for mobile */
+button, 
+a, 
+.nav-btn a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Ensure readable text on small screens */
+.blog-post p,
+.project-post p,
+.comment-text,
+.reply-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Make sure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* PROJECTS PAGE STYLES */
 
 .projects-container {
@@ -506,4 +534,81 @@
     .reply-level-3 { margin-left: 45px; }
     .reply-level-4 { margin-left: 60px; }
     .reply-level-5 { margin-left: 75px; }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .projects-container {
+        margin: 60px auto 70px auto;
+        padding: 15px;
+    }
+    
+    .project-post {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .create-project {
+        padding: 15px;
+    }
+    
+    .project-content-input,
+    .edit-content-input {
+        height: 120px;
+        font-size: 16px;
+    }
+    
+    .rating-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .comment-form,
+    .reply-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .comment-input,
+    .reply-input {
+        width: 100%;
+    }
+    
+    .project-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .media-preview-item {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .project-media-item {
+        max-width: 100%;
+        max-height: 300px;
+    }
+    
+    .reply-level-1 { margin-left: 15px; }
+    .reply-level-2 { margin-left: 30px; }
+    .reply-level-3 { margin-left: 45px; }
+    .reply-level-4 { margin-left: 60px; }
+    .reply-level-5 { margin-left: 75px; }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        margin: 50px auto 70px auto;
+        padding: 10px;
+    }
+    
+    .project-post {
+        padding: 12px;
+        border-radius: 8px;
+    }
+    
+    .star {
+        font-size: 18px;
+    }
 }

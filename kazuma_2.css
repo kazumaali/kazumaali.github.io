@@ -1,17 +1,43 @@
+/* GLOBAL RESPONSIVE ENHANCEMENTS */
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Improve touch targets for mobile */
+button, 
+a, 
+.nav-btn a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Ensure readable text on small screens */
+.blog-post p,
+.project-post p,
+.comment-text,
+.reply-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Make sure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* PROFILE AND NAME */
 .profile-picture {
     text-align: center;
-    width: 190px;
-    margin-top: 200px;
-    margin-bottom: 20px;
-    margin-left: 80px;
-    margin-right: 20px;
+    width: 90%;
+    max-width: 300px;
+    margin: 200px auto 20px auto;
     background-color: forestgreen;
-    height: 200px auto;
+    height: auto;
     border-radius: 10%;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
-    padding-top: 10px auto;
-    padding-bottom: 10px auto;
+    padding: 20px 10px;
     border: 5px ridge #FFD700;
 }
 
@@ -28,7 +54,7 @@
 .name-title {
     text-align: center;
     margin-top: 15px;
-    font-size: 18px;
+    font-size: 1.2em;
     color: #333;
 }
 
@@ -52,69 +78,61 @@
     image-rendering: high-quality;
 }
 
-
-
-
 /* ABOUT ME */
 .about-me {
     text-align: center;
-    font-size: 65%;
+    font-size: 0.9em;
     color: #333;
-    width: 190px;
+    width: 90%;
+    max-width: 300px;
     margin: 20px auto;
-    height: 200px auto;
+    height: auto;
     background-color: forestgreen;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 10px;
     border-radius: 10%;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
     border: 5px ridge #FFD700;
 }
 
 .about-me p {
-    max-width: 150px;
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 90%;
+    margin: 10px auto;
 }
 
-
-/*HIRE ME*/
+/* HIRE ME */
 .hire-me {
     background-color: forestgreen;
-    width: 190px;
-    height: 200px;
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    min-height: 200px;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
     border: 5px ridge #FFD700;
     border-radius: 10%;
     text-align: center;
-    font-size: 65%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 0.9em;
+    padding: 20px 10px;
     margin: 20px auto;
     display: block;
 }
 
 .hire-me p {
-    max-width: 150px;
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 90%;
+    margin: 10px auto;
 }
-
-
-
 
 /* SOCIAL MEDIA */
 .social-media {
     background-color: darkblue;
-    width: 190px;
-    height: 200px auto;
+    width: 90%;
+    max-width: 300px;
+    height: auto;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
     border: 5px ridge #FFD700;
     border-radius: 10%;
     text-align: center;
-    font-size: 65%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 0.9em;
+    padding: 20px 10px;
     margin: 20px auto;
     text-decoration: none;
     font-family: inherit;
@@ -122,10 +140,8 @@
 }
 
 .social-media a {
-    max-width: 150px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    max-width: 90%;
+    margin: 10px auto;
     display: block;
     background: lightblue;
     color: azure;
@@ -137,68 +153,71 @@
 
 .social-media h1 {
     color: white;
+    font-size: 1.2em;
 }
 
 .accounts a:hover {
-    transform: translatY(-2px);
+    transform: translateY(-2px);
 }
 
-
-
-
 /* BACKGROUND SLIDESHOW */
-@media (max-width: 768px) {
-    
-    .slide-show {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: -1;
-    }
-    
-    .slide {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0;
-        transition: opacity 1s ease;
-    }        
-    
-    .nav-btn {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 1000;
-        width: 100%;
-        background: none;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 6px 0;
-    }     
+.slide-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
 
-    .nav-btn a {
-        background: white;
-        font-size: 14px;
-        margin: 0 2px;
-        padding: 10px 6px;
-        color: black;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border-radius: 8px 8px 0 0;
-        flex-grow: 1;
-        border-left: 2px solid #DC143C;
-        border-right: 2px solid #DC143C;
-        text-align: center;
-            
-    }
-}    
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
 
 .slide.active {
     opacity: 1;
+}
+
+/* NAVIGATION BAR */
+.nav-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.nav-btn a {
+    background: white;
+    font-size: 0.8em;
+    margin: 0 2px;
+    padding: 10px 5px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 8px 8px 0 0;
+    flex-grow: 1;
+    border-left: 2px solid #DC143C;
+    border-right: 2px solid #DC143C;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.nav-btn a i {
+    font-size: 1.2em;
 }
 
 .nav-btn a.active {
@@ -208,18 +227,17 @@
     border-right: 2px solid #FFD700;
 }
 
-
-
-
 /* THE EDIT BUTTON */
 .edit-btn {
     background: none;
     border: none;
     width: 20px;
     height: 20px;
-    font-size: 20px;
-    margin-left: 140px;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: 10px;
     margin-top: 0;
+    cursor: pointer;
 }
 
 .edit-btn2 {
@@ -246,28 +264,17 @@
     display: none;
 }
 
-
-
 /* THE HIDE HIRE BUTTON */
 .hide-hire {
     position: absolute;
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 1.2em;
     top: 620px;
     left: 60px;
     display: none;
+    cursor: pointer;
 }
-
-.login-form {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-
-
-
-
 
 /* EMAIL SIGN UP AND LOG IN */
 .login-form {
@@ -276,22 +283,27 @@
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
     text-align: center;
-    width: 300px;
-    height: 100px;
-    top: 0;
-    left: 5px;
-    font-size: 12px;
-    padding-top: 5px;
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    padding: 15px;
+    z-index: 1001;
 }
 
 .login-form h3 {
     color: white;
+    font-size: 1.1em;
+    margin-bottom: 15px;
 }
 
 .auth-buttons {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .auth-buttons button {
@@ -300,16 +312,17 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 0.9em;
 }
 
 .auth-section input {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 8px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 0.9em;
 }
 
 .auth-section button {
@@ -321,7 +334,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 0.9em;
 }
 
 .hidden {
@@ -329,11 +342,12 @@
 }
 
 #message {
-    font-size: 12px;
+    font-size: 0.8em;
     background: white;
-    width: 50%;
-    margin-left: 70px;
-    border-radius: 20%;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .edit-form {
@@ -358,7 +372,7 @@
 
 #verificationSection p {
     color: #ddd;
-    font-size: 14px;
+    font-size: 0.8em;
     margin-bottom: 15px;
 }
 
@@ -372,7 +386,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 0.9em;
 }
 
 .logout-btn:hover {
@@ -387,4 +401,93 @@
 
 #loggedInSection {
     text-align: center;
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 768px) {
+    .profile-picture {
+        position: fixed;
+        top: 150px;
+        left: 50px;
+        width: 190px;
+        margin: 0;
+    }
+    
+    .about-me {
+        position: fixed;
+        top: 400px;
+        left: 50px;
+        width: 190px;
+        margin: 0;
+    }
+    
+    .hire-me {
+        position: fixed;
+        top: 600px;
+        left: 50px;
+        width: 190px;
+        margin: 0;
+    }
+    
+    .social-media {
+        position: fixed;
+        top: 800px;
+        left: 50px;
+        width: 190px;
+        margin: 0;
+    }
+    
+    .nav-btn {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        bottom: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+    }
+    
+    .nav-btn a {
+        flex-grow: 0;
+        width: auto;
+        min-width: 120px;
+        flex-direction: row;
+        gap: 8px;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 12px 15px;
+    }
+    
+    .login-form {
+        left: 20px;
+        transform: none;
+        top: 80px;
+    }
+    
+    .hide-hire {
+        top: 620px;
+        left: 60px;
+    }
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+    .profile-picture,
+    .about-me,
+    .hire-me,
+    .social-media {
+        margin: 20px auto;
+    }
+    
+    .nav-btn a {
+        font-size: 0.7em;
+        padding: 8px 3px;
+    }
+    
+    .nav-btn a i {
+        font-size: 1em;
+    }
 }

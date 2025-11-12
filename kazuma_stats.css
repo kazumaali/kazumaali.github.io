@@ -1,4 +1,32 @@
-/*text*/
+/* GLOBAL RESPONSIVE ENHANCEMENTS */
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Improve touch targets for mobile */
+button, 
+a, 
+.nav-btn a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Ensure readable text on small screens */
+.blog-post p,
+.project-post p,
+.comment-text,
+.reply-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Make sure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* STATISTICS PAGE STYLES */
 
 .stats-container {
@@ -281,4 +309,76 @@
 .summary-label {
     font-size: 12px;
     color: #ccc;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .stats-container {
+        margin: 60px auto 70px auto;
+        padding: 15px;
+    }
+    
+    .stats-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .chart-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .time-period-selector {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .time-period-btn {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    
+    .visitor-chart {
+        height: 250px;
+    }
+    
+    .social-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .visitor-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        margin: 50px auto 70px auto;
+        padding: 10px;
+    }
+    
+    .stats-section {
+        padding: 12px;
+    }
+    
+    .stat-value {
+        font-size: 28px;
+    }
+    
+    .visitor-summary {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-value {
+        font-size: 20px;
+    }
 }

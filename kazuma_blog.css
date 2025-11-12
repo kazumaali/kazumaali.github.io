@@ -1,4 +1,32 @@
-/*text*/
+/* GLOBAL RESPONSIVE ENHANCEMENTS */
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Improve touch targets for mobile */
+button, 
+a, 
+.nav-btn a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Ensure readable text on small screens */
+.blog-post p,
+.project-post p,
+.comment-text,
+.reply-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Make sure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* EDIT POST FORM */
 .edit-post-form {
@@ -614,3 +642,75 @@ video:playing + .video-overlay {
 .reply-level-1 { margin-left: 20px; }
 .reply-level-2 { margin-left: 40px; }
 .reply-level-3 { margin-left: 60px; }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .blog-container {
+        margin: 60px auto 70px auto;
+        padding: 15px;
+    }
+    
+    .blog-post {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .create-post {
+        padding: 15px;
+    }
+    
+    .post-content-input,
+    .edit-content-input {
+        height: 120px;
+        font-size: 16px;
+    }
+    
+    .post-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .post-profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .comment-form,
+    .reply-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .comment-input,
+    .reply-input {
+        width: 100%;
+    }
+    
+    .post-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .media-preview-item {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .post-media-item {
+        max-width: 100%;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-container {
+        margin: 50px auto 70px auto;
+        padding: 10px;
+    }
+    
+    .blog-post {
+        padding: 12px;
+        border-radius: 8px;
+    }
+}
