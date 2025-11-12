@@ -450,8 +450,6 @@ function verifyEmail() {
         pendingUserData.verified = true;
         saveUser(pendingUserData);
         
-        message.textContent = 'Email verified successfully! Welcome!';
-        message.style.color = 'green';
 
         // Update UI state
         updateLoginState();
@@ -570,8 +568,6 @@ function checkAccess() {
         localStorage.setItem('userEmail', email);
         localStorage.setItem('isLoggedIn', 'true');
         
-        message.textContent = 'Admin login successful! Welcome!';
-        message.style.color = 'green';
         
         // Update UI state
         updateLoginState();
@@ -614,8 +610,6 @@ function checkAccess() {
     localStorage.setItem('userEmail', user.email);
     localStorage.setItem('isLoggedIn', 'true');
     
-    message.textContent = 'Login successful! Welcome back!';
-    message.style.color = 'green';
     
     // Update UI state
     updateLoginState();
