@@ -27,12 +27,13 @@ img {
     max-width: 100%;
     height: auto;
 }
+
 /* PROFILE AND NAME */
 .profile-picture {
     text-align: center;
     width: 90%;
     max-width: 300px;
-    margin: 200px auto 20px auto;
+    margin: 120px auto 20px auto;
     background-color: forestgreen;
     height: auto;
     border-radius: 10%;
@@ -136,7 +137,7 @@ img {
     margin: 20px auto;
     text-decoration: none;
     font-family: inherit;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 .social-media a {
@@ -276,7 +277,7 @@ img {
     cursor: pointer;
 }
 
-/* EMAIL SIGN UP AND LOG IN */
+/* EMAIL SIGN UP AND LOG IN - IMPROVED FOR MOBILE */
 .login-form {
     position: fixed;
     background: blue;
@@ -286,55 +287,69 @@ img {
     width: 90%;
     max-width: 300px;
     height: auto;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.8em;
-    padding: 15px;
+    padding: 12px;
     z-index: 1001;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .login-form h3 {
     color: white;
-    font-size: 1.1em;
-    margin-bottom: 15px;
+    font-size: 1em;
+    margin-bottom: 10px;
 }
 
 .auth-buttons {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 8px;
+    margin-bottom: 12px;
 }
 
 .auth-buttons button {
     flex: 1;
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    min-height: 36px;
+}
+
+.auth-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.auth-section:not(.hidden) {
+    max-height: 300px;
 }
 
 .auth-section input {
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
+    padding: 8px;
+    margin: 6px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .auth-section button {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     background: #4a90e2;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 0.9em;
+    margin-top: 8px;
+    font-size: 0.85em;
+    min-height: 36px;
 }
 
 .hidden {
@@ -342,12 +357,13 @@ img {
 }
 
 #message {
-    font-size: 0.8em;
+    font-size: 0.75em;
     background: white;
-    width: 80%;
-    margin: 10px auto;
-    border-radius: 10px;
-    padding: 5px;
+    width: 90%;
+    margin: 8px auto;
+    border-radius: 8px;
+    padding: 4px;
+    word-wrap: break-word;
 }
 
 .edit-form {
@@ -367,26 +383,28 @@ img {
 
 #verificationSection h4 {
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
 }
 
 #verificationSection p {
     color: #ddd;
-    font-size: 0.8em;
-    margin-bottom: 15px;
+    font-size: 0.75em;
+    margin-bottom: 12px;
 }
 
 /* Logout Button Styles */
 .logout-btn {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     background: #dc3545 !important;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 0.9em;
+    margin-top: 8px;
+    font-size: 0.85em;
+    min-height: 36px;
 }
 
 .logout-btn:hover {
@@ -396,11 +414,76 @@ img {
 #loggedInSection h4 {
     color: white;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    font-size: 0.9em;
 }
 
 #loggedInSection {
     text-align: center;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+    .profile-picture,
+    .about-me,
+    .hire-me,
+    .social-media {
+        margin: 15px auto;
+    }
+    
+    .profile-picture {
+        margin-top: 100px;
+    }
+    
+    .nav-btn a {
+        font-size: 0.7em;
+        padding: 8px 3px;
+    }
+    
+    .nav-btn a i {
+        font-size: 1em;
+    }
+    
+    /* Compact login form for mobile */
+    .login-form {
+        top: 5px;
+        padding: 10px;
+        max-height: 85vh;
+    }
+    
+    .login-form h3 {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+    
+    .auth-buttons {
+        margin-bottom: 8px;
+    }
+    
+    .auth-buttons button {
+        padding: 6px;
+        font-size: 0.8em;
+        min-height: 32px;
+    }
+    
+    .auth-section input {
+        padding: 6px;
+        margin: 4px 0;
+        font-size: 0.8em;
+    }
+    
+    .auth-section button {
+        padding: 6px;
+        margin-top: 6px;
+        font-size: 0.8em;
+        min-height: 32px;
+    }
+    
+    #message {
+        font-size: 0.7em;
+        margin: 6px auto;
+        padding: 3px;
+    }
 }
 
 /* DESKTOP STYLES */
@@ -435,6 +518,7 @@ img {
         left: 50px;
         width: 190px;
         margin: 0;
+        margin-bottom: 0;
     }
     
     .nav-btn {
@@ -465,6 +549,12 @@ img {
         left: 20px;
         transform: none;
         top: 80px;
+        padding: 15px;
+        max-height: none;
+    }
+    
+    .login-form h3 {
+        font-size: 1.1em;
     }
     
     .hide-hire {
@@ -473,21 +563,35 @@ img {
     }
 }
 
-/* MOBILE STYLES */
-@media (max-width: 767px) {
-    .profile-picture,
-    .about-me,
-    .hire-me,
-    .social-media {
-        margin: 20px auto;
+/* EXTRA SMALL MOBILE STYLES */
+@media (max-width: 480px) {
+    .profile-picture {
+        margin-top: 90px;
+        padding: 15px 8px;
     }
     
-    .nav-btn a {
-        font-size: 0.7em;
-        padding: 8px 3px;
+    .login-form {
+        top: 3px;
+        padding: 8px;
     }
     
-    .nav-btn a i {
-        font-size: 1em;
+    .login-form h3 {
+        font-size: 0.85em;
+        margin-bottom: 6px;
+    }
+    
+    .auth-buttons button {
+        font-size: 0.75em;
+        padding: 5px;
+    }
+    
+    .auth-section input {
+        padding: 5px;
+        font-size: 0.75em;
+    }
+    
+    .auth-section button {
+        padding: 5px;
+        font-size: 0.75em;
     }
 }
